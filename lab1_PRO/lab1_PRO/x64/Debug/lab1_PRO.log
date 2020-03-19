@@ -1,0 +1,2 @@
+﻿  Source.cpp
+D:\Projects\lab1_PRO\lab1_PRO\Source.cpp(2,10): fatal error C1083: Cannot open include file: 'mpi.h': No such file or directory
