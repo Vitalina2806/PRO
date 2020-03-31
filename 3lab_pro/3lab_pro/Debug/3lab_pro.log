@@ -1,0 +1,3 @@
+﻿  Source.cpp
+D:\Projects\3lab_pro\3lab_pro\3lab_pro\Source.cpp(68,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  3lab_pro.vcxproj -> D:\Projects\3lab_pro\3lab_pro\Debug\3lab_pro.exe
