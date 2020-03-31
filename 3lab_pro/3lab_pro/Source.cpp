@@ -3,7 +3,6 @@
 #include <iostream>
 #include <fstream>
 #include <string.h>
-#include <time.h>
 using namespace std;
 
 
@@ -71,7 +70,7 @@ int main(int argc, char* argv[])
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 
 
-	//1 завдання
+	//1 Г§Г ГўГ¤Г Г­Г­Гї
 	if (rank == 1)
 		strcpy(buf_for_msg, "I'm msg from 1 process");
 	MPI_Bcast(&buf_for_msg, 25, MPI_CHAR, 1, MPI_COMM_WORLD);
@@ -81,7 +80,7 @@ int main(int argc, char* argv[])
 	}
 
 
-	//2 завдання
+	//2 Г§Г ГўГ¤Г Г­Г­Гї
 	if (size == 5)
 	{
 		if (rank == 0) 
