@@ -60,6 +60,12 @@ using namespace std;
 			MPI_Buffer_detach(&buf, &t);
 
 		}*/
+		if (rank == p2)
+		{
+			MPI_Ssend(arr2, 4, MPI_INT, p1, 0, MPI_COMM_WORLD);
+
+			MPI_Recv(arr2, 4, MPI_INT, p1, 0, MPI_COMM_WORLD, &status);
+		}
 
 		if (rank == p1)
 		{
@@ -80,12 +86,7 @@ using namespace std;
 			MPI_Ssend(bf + 4, 4, MPI_INT, p2, 0, MPI_COMM_WORLD);
 		}
 
-		if (rank == p2)
-		{
-			MPI_Ssend(arr2, 4, MPI_INT, p1, 0, MPI_COMM_WORLD);
-
-			MPI_Recv(arr2, 4, MPI_INT, p1, 0, MPI_COMM_WORLD, &status);
-		}
+		
 	}
 
 int main(int argc, char* argv[])
