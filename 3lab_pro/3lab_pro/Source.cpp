@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <string.h>
+#include <time.h>
 using namespace std;
 
 
@@ -25,10 +26,11 @@ using namespace std;
 		}
 	}
 	void p(int rank, int p1, int p2)
-	{
+	{/*
 		if (rank == p2)
 		{
 			buf = new int[t + MPI_BSEND_OVERHEAD];
+
 			MPI_Buffer_attach(buf, t + MPI_BSEND_OVERHEAD);
 
 			MPI_Bsend(arr2, 4, MPI_INT, p1, 0, MPI_COMM_WORLD);
@@ -51,11 +53,38 @@ using namespace std;
 			{
 				arr2[i] = bf[i];
 			}
+			
 			buf = new int[t + MPI_BSEND_OVERHEAD];
 			MPI_Buffer_attach(buf, t + MPI_BSEND_OVERHEAD);
 			MPI_Bsend(bf + 4, 4, MPI_INT, p2, 0, MPI_COMM_WORLD);
 			MPI_Buffer_detach(&buf, &t);
 
+		}*/
+
+		if (rank == p1)
+		{
+			MPI_Recv(bf, 4, MPI_INT, p2, 0, MPI_COMM_WORLD, &status);
+
+			for (int i = 4; i < 8; i++)
+			{
+				bf[i] = arr2[i - 4];
+			}
+
+			bubblesort(bf, 8);
+
+			for (int i = 0; i < 4; i++)
+			{
+				arr2[i] = bf[i];
+			}
+
+			MPI_Ssend(bf + 4, 4, MPI_INT, p2, 0, MPI_COMM_WORLD);
+		}
+
+		if (rank == p2)
+		{
+			MPI_Ssend(arr2, 4, MPI_INT, p1, 0, MPI_COMM_WORLD);
+
+			MPI_Recv(arr2, 4, MPI_INT, p1, 0, MPI_COMM_WORLD, &status);
 		}
 	}
 
@@ -64,12 +93,13 @@ int main(int argc, char* argv[])
 	int rank, size;
 	
 	status.count = 0;
+	srand(time(NULL));
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 
 
-	//1 çàâäàííÿ
+	//1 завдання
 	if (rank == 1)
 		strcpy(buf_for_msg, "I'm msg from 1 process");
 	MPI_Bcast(&buf_for_msg, 25, MPI_CHAR, 1, MPI_COMM_WORLD);
@@ -79,7 +109,7 @@ int main(int argc, char* argv[])
 	}
 
 
-	//2 çàâäàííÿ
+	//2 завдання
 	if (size == 5)
 	{
 		if (rank == 0) 
@@ -92,13 +122,14 @@ int main(int argc, char* argv[])
 			}
 		}
 		MPI_Scatter(arr, 4, MPI_INT, arr2, 4, MPI_INT, 0, MPI_COMM_WORLD);
-		for (int i = 0; i < 4; i++)
+	        for (int i = 0; i < 4; i++)
 		{
 			for (int j = i + 1; j < 5; j++)
 			{
 				p(rank, i, j);
 			}
 		}
+
 		MPI_Gather(arr2, 4, MPI_INT, arr, 4, MPI_INT, 0, MPI_COMM_WORLD);
 
 		if (rank == 0)
