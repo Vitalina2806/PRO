@@ -26,12 +26,9 @@ public:
 	{
 		end = std::chrono::high_resolution_clock::now();
 		return std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-
-
 	}
 private:
 	std::chrono::time_point<std::chrono::steady_clock> start, end;
-	std::chrono::duration<float> duration;
 };
 
 void first_task()
