@@ -1,0 +1,23 @@
+﻿  Source.cpp
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_pro\lab5_pro\Source.cpp(28,82): warning C4244: 'return': conversion from '_Rep' to 'double', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_pro\lab5_pro\Source.cpp(37): warning C4101: 'num_6': unreferenced local variable
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_pro\lab5_pro\Source.cpp(125,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_pro\lab5_pro\Source.cpp(130,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_pro\lab5_pro\Source.cpp(138,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_pro\lab5_pro\Source.cpp(151,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xutility(3606,22): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\xutility(3643): message : see reference to function template instantiation 'std::ostream_iterator<float,char,std::char_traits<char>> std::_Copy_unchecked<int*,std::ostream_iterator<float,char,std::char_traits<char>>>(int *,int *,std::ostream_iterator<float,char,std::char_traits<char>>)' being compiled
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_pro\lab5_pro\Source.cpp(133): message : see reference to function template instantiation 'std::ostream_iterator<float,char,std::char_traits<char>> std::copy<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::ostream_iterator<float,char,std::char_traits<char>>>(std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::ostream_iterator<float,char,std::char_traits<char>>)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+  lab5_pro.vcxproj -> C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_pro\Debug\lab5_pro.exe
