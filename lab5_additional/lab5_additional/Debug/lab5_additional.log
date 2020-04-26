@@ -1,0 +1,9 @@
+﻿  Source.cpp
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_additional\lab5_additional\Source.cpp(19,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\algorithm(1571,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_additional\lab5_additional\Source.cpp(60): message : see reference to function template instantiation 'void std::generate<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,second_task::<lambda_e52a09500427d9e2a42cd01a945c9c06>>(std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,second_task::<lambda_e52a09500427d9e2a42cd01a945c9c06>)' being compiled
+          with
+          [
+              _Ty=float
+          ]
+  lab5_additional.vcxproj -> C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab5_additional\Debug\lab5_additional.exe
