@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab6_pro\lab6_pro\Source.cpp(13,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab6_pro\lab6_pro\Source.cpp(14,20): warning C4018: '<': signed/unsigned mismatch
+  lab6_pro.vcxproj -> C:\Users\vss28\Desktop\ХНУ\3 курс\ПРО\lab6_pro\Debug\lab6_pro.exe
