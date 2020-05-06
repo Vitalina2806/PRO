@@ -60,7 +60,7 @@ void calcSumMono(int maxsum, vector<vector<int>> a, vector<int> s,int n) {
 	cout << "Max sum = " << maxsum << endl;
 }
 
-void calcSumCilk(int maxsum, vector<vector<int>> a, vector<int> s, int n) {
+void calcSumCilk(vector<vector<int>> a, vector<int> s, int n) {
 	//calculate sum of each diag
 	for (int j = 0; j < (2 * n); j++)
 	{
@@ -78,7 +78,7 @@ void calcSumCilk(int maxsum, vector<vector<int>> a, vector<int> s, int n) {
 	}
 	for (int j = 1; j < n; j++) cout << s[j] << "\n";
 	for (int j = n + 1; j < (2 * n); j++) cout << s[j] << "\n";
-	maxsum = -1000;
+	//maxsum = -1000;
 
 	//find maxs
 	cilk_for( int i = 0; i < n; ++i)
@@ -123,7 +123,7 @@ int main()
 	timer.Start();
 	cout << "Sum of each diag: " << endl;
 
-	calcSumCilk(maxsum, a, s, n);
+	calcSumCilk(a, s, n);
 	timer.Stop();
 	cout << "Parallel time: " << timer.elapsedMilliseconds() << endl;
 	
