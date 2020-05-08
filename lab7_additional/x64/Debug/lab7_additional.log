@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\Users\vss28\Desktop\╒═╙\3 ъєЁё\╧╨╬\lab7_additional\lab7_additional\Source.cpp(30): warning #3947: "_Cilk_for" has been deprecated, and will be removed in a future release.  Please refer to release notes for details and recommended alternatives
+    	cilk_for (int i = 0; i < s.size(); i++) {
+    	^
+  
